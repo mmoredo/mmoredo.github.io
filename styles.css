@@ -75,3 +75,11 @@ a {
 section {
  padding: 40px 0 20px 0;
 }
+
+/* Media query */
+
+@media (max-width: 480px) {
+      #links a, p {
+        max-width: 100%;
+      }
+  }
