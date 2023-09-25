@@ -129,21 +129,21 @@ a {
     margin-top: 0.75rem;
     padding: 0.75rem 1rem;
     padding-right: 0.75rem;
-    background-color: var(--verde-claro);
+    background-color: var(--verde);
     border-radius: 0.25rem;
     margin-right: 0.25rem;
     align-items: center;
     justify-content: space-between;
-    border: 0.125rem solid var(--verde-claro);
 }
 
 #links a {
     text-decoration: none;
-    color: var(--verde);
+    color: var(--crema);
 }
 
 #links div:hover {
-    border: 0.125rem solid var(--verde);
+    background-color: var(--verde-oscuro);
+
 }
 
 #links p {
