@@ -1,0 +1,147 @@
+@use "../abstracts/variables" as *;
+@use "../abstracts/mixins" as *;
+
+// Case card
+
+.case-study-card {
+    @include flex;
+    border-radius: 0.75rem;
+    margin-bottom: 3.75rem;
+    gap: 2.5rem;
+
+    @media (max-width: $breakpoint-md) {
+        @include flex-col;
+        gap: 0;
+    }
+
+    &:hover {
+        background: linear-gradient(180deg, $lime-green 0%, transparent 100%);
+        outline: 2px $light-green solid;
+
+        h3 {
+            text-decoration: underline;
+        }
+
+        .button {
+            background-color: $green;
+            color: $lime-green;
+        }
+    }
+
+    &:focus {
+        h3 {
+            text-decoration: underline;
+        }
+
+        .button {
+            background-color: $green;
+            color: $lime-green;
+        }
+    }
+}
+
+.case-study-thumbnail {
+    border-radius: 0.75rem;
+    min-width: 60%;
+    @include flex;
+    @include flex-center;
+
+    img {
+        height: auto;
+        width: 100%;
+        border-radius: 0.75rem;
+        object-fit: cover;
+    }
+}
+
+.case-study-content {
+    padding: 2rem;
+    padding-left: 0;
+    min-width: calc(40% - 2.5rem);
+
+    @media (max-width: $breakpoint-md) {
+        padding: 2rem;
+        padding-top: 3rem;
+    }
+
+    @media (max-width: $breakpoint-sm) {
+        padding: 1rem;
+        padding-top: 2rem;
+    }
+
+    &--detail {
+        flex-grow: 1;
+    }
+
+    &--title {
+        margin-bottom: 1rem;
+    }
+
+    &--subtitle {
+        margin-bottom: 0.75rem;
+        height: auto;
+
+        img {
+            margin: 0 0.4rem;
+        }
+    }
+
+    &--text {
+        margin-bottom: 2rem;
+        @media (max-width: $breakpoint-md) {
+            margin-bottom: 1.5rem;
+        } 
+    }
+
+    a {
+        text-decoration: none;
+    }
+}
+
+
+// Buttons
+
+.button {
+    @include flex;
+    @include flex-center;
+    border: 1px solid $green;
+    padding: 0.5rem 1.25rem;
+    color: $green;
+    border-radius: 0.3rem;
+    width: fit-content;
+
+    &--large {
+        padding: 0.8rem 2rem;
+        background-color: $green;
+        color: $lime-green;
+    }
+}
+
+// Outside link
+
+.outside-link-container {
+    margin: 3rem 0;
+}
+
+.outside-link {
+    @include flex;
+    @include flex-space-between;
+    @include flex-center;
+    padding: 1rem;
+    padding-left: 1.25rem;
+    border-radius: 0.25rem;
+    border: 1.5px solid $green;
+    color: $green;
+
+    &:hover {
+        background-color: $lime-green;
+    }
+
+    &:first-child {
+        margin-bottom: 1rem;
+    }
+
+    span {
+        padding-right: 0.5rem;
+    }
+}

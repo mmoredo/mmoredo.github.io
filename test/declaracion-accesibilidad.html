@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="noindex">
+    <link href="scss/style.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:wght@400;700&family=Literata:opsz,wght@7..72,400;7..72,500;7..72,600&display=swap"
+        rel="stylesheet">
+    <title>Mariana Moredo | Declaración de accesibilidad</title>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-44WWZLZBHE"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+        gtag('config', 'G-44WWZLZBHE');
+    </script>
+</head>
+
+<body>
+    <a href="#main" class="skip-to-main-content button button--large">Ir al contenido principal</a>
+
+    <div class="container">
+
+        <header class="navigation">
+
+            <div class="navigation--name-title">
+                <a href="index.html" aria-label="Página principal"><span aria-hidden="true">Mariana Moredo</span></a>
+            </div>
+
+            <nav class="menu-navigation">
+
+                <ul class="menu-navigation-list">
+                    <li>
+                        <a class="menu-navigation-list--item"
+                            href="index.html">Proyectos</a>
+                    </li>
+                    <li>
+                        <a class="menu-navigation-list--item" href="sobre-mi.html">Sobre mi</a>
+                    </li>
+                    <li>
+                        <a class="menu-navigation-list--item" href="contacto.html">Contacto</a>
+                    </li>
+                </ul>
+
+            </nav>
+
+            <div class="language-selector">
+                <ul class="menu-navigation-list">
+                    <li class="menu-navigation-list--lg"><a
+                            class="menu-navigation-list--item menu-navigation-list--item--current" aria-current="page"
+                            href="declaracion-accesibilidad.html">Español</a></li>
+                    <li class="menu-navigation-list--lg"><a class="menu-navigation-list--item" href="/en" lang="en"
+                            hreflang="en">English</a></li>
+
+                    <!-- mobile -->
+                    <li class="menu-navigation-list--md"><a
+                            class="menu-navigation-list--item menu-navigation-list--item--current" aria-current="page"
+                            href="declaracion-accesibilidad.html">ES</a></li>
+                    <li class="menu-navigation-list--md"><a class="menu-navigation-list--item" href="/en" lang="en"
+                            hreflang="en">EN</a></li>
+
+                </ul>
+            </div>
+
+        </header>
+
+        <main tabindex="-1" id="main" class="container-case-study">
+            <div class="sm-container">
+
+                <h1 class="case-title">Declaración de accesibilidad</h1>
+
+                <p>Las <a class="text-link" href="https://www.w3.org/WAI/standards-guidelines/wcag/es">Pautas de
+                        Accesibilidad para el Contenido Web (WCAG)</a> definen los requisitos para que diseñadores y
+                    desarrolladores mejoren la accesibilidad de las personas con discapacidad. Define tres niveles de
+                    conformidad: Nivel A, Nivel AA y Nivel AAA.</p>
+                <p>Me comprometo a que este sitio web sea conforme con WCAG 2.1 nivel AA. Si querés informar alguna
+                    barrera, error o requisito de acceso, ponete en contacto conmigo a <a class="text-link"
+                        href="mailto:hola@mmoredo.com">hola@mmoredo.com</a>.</p>
+
+            </div>
+
+        </main>
+
+    </div>
+
+    <div class="footer">
+        <footer>
+            <div class="section-container footer-container footer--content">
+                <div class="footer-contact">
+                    <img src="../img/footer-star.svg" alt="" width="40" height="40">
+                    <h4>¡Hablemos!</h4>
+                    <a href="mailto:hola@mmoredo.com">hola@mmoredo.com</a>
+                </div>
+                <div class="footer--links">
+                    <div class="footer-col">
+                        <h4>Secciones</h4>
+                        <ul>
+                            <li>
+                                <a href="index.html">Proyectos</a>
+                            </li>
+                            <li>
+                                <a href="sobre-mi.html">Sobre mi</a>
+                            </li>
+                            <li>
+                                <a href="contacto.html">Contacto</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="footer-col">
+                        <h4>Contacto</h4>
+                        <ul>
+                            <li><a href="mailto:hola@mmoredo.com">Email</a></li>
+                            <li><a href="https://www.linkedin.com/in/mmoredo/">LinkedIn</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="separator footer-container"></div>
+            <div class="footer-copyright footer-container">
+                <span>© 2023 Mariana Moredo</span>
+                <a href="declaracion-accesibilidad.html" aria-current="page">Declaración de Accesibilidad</a>
+            </div>
+        </footer>
+    </div>
+
+</body>
+
+</html>

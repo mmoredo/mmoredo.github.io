@@ -1,0 +1,175 @@
+@use "../abstracts/variables" as *;
+@use "../abstracts/mixins" as *;
+
+.container-case-study {
+    margin-top: 4rem;
+
+    @media (max-width: 375px) {
+        margin-top: 2rem;
+    }
+
+}
+
+section {
+    margin: 4rem 0;
+}
+
+.section--no-style {
+    margin: 0;
+}
+
+.subsection {
+    margin: 2rem 0;
+}
+
+.case-information {
+    display: grid; // variable grid
+    grid-auto-flow: column;
+    grid-auto-columns: 1fr;
+
+    @media (max-width: $breakpoint-xs) {
+        @include flex;
+        @include flex-col;
+    }
+
+    div {
+        @include flex;
+        @include flex-col;
+        padding-right: 2rem;
+
+        @media (max-width: $breakpoint-xs) {
+            margin: 0.5rem 0;
+            padding: 0;
+        }
+    
+    }
+}
+
+.text-list {
+    list-style-type: disc;
+    padding-left: 2rem;
+
+    li:not(:last-child) {
+        margin-bottom: 0.5rem;
+    }
+
+    &--contact {
+        margin-top: 2rem;
+    }
+}
+
+.case-hero-image {
+    margin-top: 4rem;
+    margin-bottom: 5rem;
+
+    @media (max-width: $breakpoint-sm) {
+        margin: 2rem 0;
+    }
+
+    img {
+        width: 100%;
+        height: auto;
+        border-radius: 0.75rem;
+    }
+}
+
+figure {
+    margin: 0.5rem 0;
+
+    img {
+        width: 100%;
+        height: auto;
+        border-radius: 0.3rem;
+        margin-bottom: 1rem;
+        box-shadow: $image-shadow;
+    }
+}
+
+.figma-prototype {
+    width: 100%;
+    height: 600px;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    border-radius: 4px;
+
+    @media (max-width: $breakpoint-md) {
+        display: none;
+    }
+}
+
+.case-figures {
+    @include flex;
+    @include flex-row;
+    align-items: flex-end;
+    gap: 1rem;
+    margin: 3rem 0;
+
+    @media (max-width: $breakpoint-md) {
+        @include flex-col;
+    }
+
+    &-figure-small {
+        width: 100%;
+
+        @media (max-width: $breakpoint-md) {
+            width: auto;
+        }
+    }
+
+    &--no-shadow {
+        box-shadow: none;
+    }
+
+    &-col {
+        @include flex-col;
+        margin: 3rem 0;
+
+        figure {
+            margin: 3rem 0;
+        }
+    }
+}
+
+.case-insights {
+    @include flex;
+    @include flex-space-between;
+    margin: 3rem 0;
+    gap: 1rem;
+
+    @media (max-width: $breakpoint-md) {
+        @include flex-col;
+    }
+
+    &-title {
+        margin-bottom: 1.5rem;
+
+        span {
+            color: $green;
+            line-height: $line-height-base;
+        }
+    }
+
+    p {
+        line-height: $line-height-base;
+        font-weight: 500;
+        margin-bottom: 0.8rem;
+    }
+
+    >div {
+        flex: 1 1 0;
+        border-radius: 0.25rem;
+        padding: 1rem;
+        background-color: $light-beige;
+    }
+
+    li {
+        padding: 0.8rem;
+        border-radius: 0.4rem;
+        line-height: $line-height-base;
+        background-color: white;
+        box-shadow: 0px 1px 6px 0px rgba(0, 0, 0, 0.05);
+        margin-bottom: 0.75rem;
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
+}

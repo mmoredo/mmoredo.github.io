@@ -1,0 +1,71 @@
+@use "../abstracts/variables" as *;
+
+// Fonts
+
+@mixin literata-regular {
+    font-family: 'Literata', serif;
+    font-weight: 400;
+}
+
+@mixin literata-medium {
+    font-family: 'Literata', serif;
+    font-weight: 500;
+}
+
+@mixin literata-semibold {
+    font-family: 'Literata', serif;
+    font-weight: 600;
+}
+
+@mixin atkinson-regular {
+    font-family: 'Atkinson Hyperlegible', sans-serif;
+    font-weight: 400;
+}
+
+@mixin atkinson-bold {
+    font-family: 'Atkinson Hyperlegible', sans-serif;
+    font-weight: 700;
+}
+
+// Flexbox
+
+@mixin flex {
+    display: flex;
+}
+
+@mixin flex-center {
+    align-items: center;
+} 
+
+@mixin flex-col {
+    flex-direction: column;
+} 
+
+@mixin flex-row {
+    flex-direction: row;
+} 
+
+@mixin flex-space-between {
+    justify-content: space-between;
+}
+
+@mixin flex-start {
+    align-items: flex-start;
+}
+
+@mixin flex-end {
+    justify-content: flex-end;
+}
+
+@mixin flex-justify-center {
+    justify-content: center;
+}
+
+@mixin flex-align-end {
+    align-items: flex-end;
+}
+
+@mixin flex-nav {
+    flex-grow: 1;
+    flex-basis: 0;
+}

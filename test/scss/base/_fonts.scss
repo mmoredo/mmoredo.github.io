@@ -1,0 +1,233 @@
+@use "../abstracts/variables" as *;
+@use "../abstracts/mixins" as *;
+
+html {
+    font-size: 16px;
+
+    @media (max-width: $breakpoint-sm) {
+        font-size: 14px;
+    }
+}
+
+body {
+    @include atkinson-regular;
+}
+
+.main-title {
+    @include literata-regular;
+    font-size: 2.25rem;
+    color: $green;
+
+    @media (max-width: $breakpoint-sm) {
+        font-size: 1.8rem;
+    }
+}
+
+.cards-title {
+    @include literata-regular;
+    font-size: 1.75rem;
+    margin-bottom: 2.5rem;
+    color: $green;
+
+    @media (max-width: $breakpoint-sm) {
+        font-size: 1.5rem;
+        margin-bottom: 2rem;
+    }
+
+    &--contact {
+        margin-bottom: 1.5rem;
+    }
+}
+
+// Components
+
+.button {
+    font-size: 0.875rem;
+
+    &--large {
+        font-size: 1.2rem;
+    }
+}
+
+.case-study-content {
+    &--title {
+        @include literata-medium;
+        font-size: 1.5rem;
+        color: $green;
+        line-height: $line-height-base;
+    }
+
+    &--subtitle {
+        @include flex;
+        @include flex-center;
+
+        &--case-study {
+            margin-bottom: 1rem;
+        }
+
+        &--text {
+            @include atkinson-bold;
+            font-size: 0.875rem;
+            text-transform: uppercase;
+            letter-spacing: $letter-spacing-subtitle;
+            color: $green;
+            line-height: normal;
+            &--large {
+                font-size: 1rem;
+            }
+        }
+
+    }
+
+    &--text {
+        @include atkinson-regular;
+        font-size: 1rem;
+        color: $dark-green;
+        line-height: $line-height-base;
+    }
+}
+
+// Footer
+
+footer {
+    color: $cream;
+
+    a {
+        color: $lime-green;
+    }
+
+    h4 {
+        @include literata-regular;
+        margin: 0.5rem 0;
+    }
+}
+
+.footer--links {
+
+    h4 {
+        font-size: 1.1em;
+    }
+}
+
+.footer-contact {
+    font-size: 20px;
+
+    a {
+        @include literata-regular;
+    }
+
+}
+
+// Navigation
+
+.navigation span {
+    @include literata-medium;
+    font-size: 1.5rem;
+    color: $dark-green;
+}
+
+.menu-navigation-list {
+    @include literata-regular;
+    font-size: 1rem;
+
+    &--item--current {
+        @include literata-semibold;
+        color: $dark-green;
+    }
+}
+
+// Case study
+
+p, .text-list, .case-section-subtitle {
+    @include literata-regular;
+    font-size: 1.125rem;
+    line-height: $line-height-medium;
+    color: $dark-green;
+    margin-bottom: 1rem;
+}
+
+.case-title {
+    @include literata-regular;
+    font-size: 2.25rem;
+    margin-bottom: 3rem;
+    color: $green;
+    line-height: $line-height-base;
+
+    @media (max-width: $breakpoint-sm) {
+        font-size: 2rem;
+        margin-bottom: 2rem;
+    }
+
+}
+
+.case-section-title {
+    @include literata-semibold;
+    font-size: 1.25rem;
+    margin-bottom: 1rem;
+    line-height: $line-height-base;
+    color: $green;
+}
+
+.case-section-subtitle {
+    @include literata-semibold;
+}
+
+
+.case-information {
+    color: $dark-green;
+    line-height: $line-height-base;
+
+    div span:first-child {
+        color: $green;
+        margin-bottom: 0.25rem;
+    }
+}
+
+.text {
+    &-quote {
+        @include atkinson-regular;
+        font-size: 1.5rem;
+        padding: 0 1.5rem;
+        line-height: $line-height-base;
+        color: $green;
+        margin: 3rem 0;
+    }
+    &-note {
+        color: $green;
+        font-size: 1rem;
+        margin-top: 2rem;
+    }
+    &-bold {
+        @include literata-semibold;
+    }
+    &-medium {
+        @include literata-medium;
+    }
+    &-list {
+        font-size: 1.1rem;
+    }
+    &-introduction {
+        font-size: 1.3rem;
+        line-height: $line-height-medium;
+        color: $green;
+        margin-bottom: 2rem;
+    }
+
+    &--about {
+        margin-bottom: 2rem;
+
+        &--list {
+            margin-bottom: 0.8rem;
+        }
+    }
+
+    &--page-content {
+        font-size: 1.15rem;
+    }
+}
+
+figcaption, .caption {
+    color: $green;
+    line-height: $line-height-base;
+}
+
