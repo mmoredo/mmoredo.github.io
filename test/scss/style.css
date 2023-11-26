@@ -1,3 +1,4 @@
+@charset "UTF-8";
 * {
   margin: 0;
   padding: 0;
@@ -58,18 +59,6 @@ body {
 .lg-container {
   max-width: 1024px;
   margin: 0 auto;
-}
-
-.project-summary {
-  display: flex;
-  flex-direction: row;
-  gap: 4rem;
-}
-.project-summary section:first-child {
-  width: calc(75% - 4rem);
-}
-.project-summary section:last-child {
-  width: 25%;
 }
 
 ul {
@@ -172,6 +161,46 @@ a {
 }
 .case-study-content a {
   text-decoration: none;
+}
+
+.project-summary {
+  display: flex;
+  flex-direction: row;
+  gap: 4rem;
+}
+@media (max-width: 640px) {
+  .project-summary {
+    flex-direction: column;
+    gap: 0;
+  }
+}
+@media (max-width: 640px) {
+  .project-summary section {
+    width: 100%;
+    margin: 2rem 0;
+  }
+}
+.project-summary section:first-child {
+  width: calc(75% - 4rem);
+}
+@media (max-width: 640px) {
+  .project-summary section:first-child {
+    width: 100%;
+  }
+}
+.project-summary section:last-child {
+  width: 25%;
+}
+@media (max-width: 640px) {
+  .project-summary section:last-child {
+    width: 100%;
+    margin-bottom: 4rem;
+  }
+}
+@media (max-width: 640px) {
+  .project-summary h2 {
+    margin-bottom: 2rem;
+  }
 }
 
 .button {
@@ -394,7 +423,7 @@ p,
   color: #093116;
   line-height: 1.5;
 }
-.case-information div span:first-child {
+.case-information h3 {
   font-family: "Literata", serif;
   font-weight: 500;
   color: #0D4520;
@@ -436,7 +465,7 @@ p,
   margin-bottom: 1.5rem;
 }
 .text--about--list {
-  margin-bottom: 1rem;
+  margin-bottom: 0.5rem;
 }
 .text--page-content {
   font-size: 1.15rem;
@@ -446,6 +475,10 @@ figcaption,
 .caption {
   color: #0D4520;
   line-height: 1.5;
+}
+
+.disclaimer {
+  line-height: 1.75;
 }
 
 footer {
@@ -482,8 +515,14 @@ footer a:hover {
   align-items: center;
 }
 @media (max-width: 640px) {
-  .footer-container:not(.footer-copyright) {
+  .footer-container {
     flex-direction: column;
+    align-items: flex-start;
+  }
+}
+@media (max-width: 640px) {
+  .footer-contact {
+    margin-bottom: 1.5rem;
   }
 }
 .footer-col {
@@ -514,6 +553,7 @@ footer a:hover {
 @media (max-width: 425px) {
   .footer-copyright {
     flex-direction: column;
+    align-items: flex-start;
   }
 }
 @media (max-width: 640px) {
@@ -828,14 +868,21 @@ footer h4::selection {
   padding-top: 2rem;
 }
 
+section.agradecimientos {
+  margin: 0;
+}
+
 .agradecimientos--text {
   font-family: "Literata", serif;
   font-weight: 500;
   font-size: 1.25rem;
   margin-bottom: 1.5rem;
 }
+.agradecimientos ul {
+  margin-bottom: 1.5rem;
+}
 .agradecimientos li {
-  margin-bottom: 0.5rem;
+  margin-bottom: 0.75rem;
 }
 .agradecimientos li:last-child {
   margin: 0;
@@ -866,19 +913,29 @@ section {
   display: flex;
   flex-direction: column;
 }
+@media (max-width: 640px) {
+  .case-information {
+    flex-direction: row;
+  }
+}
 .case-information div {
   display: flex;
   flex-direction: column;
   padding-bottom: 2rem;
+  /* @media (max-width: $breakpoint-xs) {
+       margin: 0.5rem 0;
+       padding: 0;
+   }¨*/
+}
+@media (max-width: 640px) {
+  .case-information div {
+    width: 33%;
+    padding-bottom: 0;
+    padding-right: 2rem;
+  }
 }
 .case-information div:last-child {
   padding: 0;
-}
-@media (max-width: 425px) {
-  .case-information div {
-    margin: 0.5rem 0;
-    padding: 0;
-  }
 }
 
 .text-list {

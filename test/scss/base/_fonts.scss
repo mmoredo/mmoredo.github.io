@@ -11,6 +11,7 @@ html {
 
 body {
     @include atkinson-regular;
+    
 }
 
 .main-title {
@@ -175,7 +176,7 @@ p,
     color: $dark-green;
     line-height: $line-height-base;
 
-    div span:first-child {
+    h3 {
         @include literata-medium;
         color: $green;
         margin-bottom: 0.5rem;
@@ -221,7 +222,7 @@ p,
         margin-bottom: 1.5rem;
 
         &--list {
-            margin-bottom: 1rem;
+            margin-bottom: 0.5rem;
         }
     }
 
@@ -234,4 +235,8 @@ figcaption,
 .caption {
     color: $green;
     line-height: $line-height-base;
+}
+
+.disclaimer {
+    line-height: $line-height-medium;
 }

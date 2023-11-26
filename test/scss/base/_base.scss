@@ -69,24 +69,6 @@ body {
     //padding: 0 1.5rem;
 }
 
-// Project summary
-
-.project-summary {
-    @include flex;
-    @include flex-row;
-    gap: 4rem;
-
-    section {
-        &:first-child {
-            width: calc(75% - 4rem);
-        }
-
-        &:last-child {
-            width: 25%;
-        }
-    }
-}
-
 // Global resets
 
 ul {

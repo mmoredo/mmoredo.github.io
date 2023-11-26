@@ -36,10 +36,16 @@ footer {
         @include flex-space-between;
         @include flex-center;
 
-        &:not(.footer-copyright) {
-            @media (max-width: $breakpoint-sm) {
+        @media (max-width: $breakpoint-sm) {
                 @include flex-col;
+                @include flex-start;
             }
+        
+    }
+
+    &-contact {
+        @media (max-width: $breakpoint-sm) {
+            margin-bottom: 1.5rem;
         }
     }
 
@@ -73,6 +79,7 @@ footer {
 
     @media (max-width: $breakpoint-xs) {
         @include flex-col;
+        @include flex-start;
     }
 
     span {

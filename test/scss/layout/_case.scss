@@ -26,19 +26,29 @@ section {
     @include flex;
     @include flex-col;
 
+    @media (max-width: $breakpoint-sm) {
+        @include flex-row;
+    }
+
     div {
         @include flex;
         @include flex-col;
         padding-bottom: 2rem;
 
+        @media (max-width: $breakpoint-sm) {
+            width: 33%;
+            padding-bottom: 0;
+            padding-right: 2rem;
+        }
+
         &:last-child {
             padding: 0;
         }
 
-        @media (max-width: $breakpoint-xs) {
+       /* @media (max-width: $breakpoint-xs) {
             margin: 0.5rem 0;
             padding: 0;
-        }
+        }¨*/
 
     }
 }
