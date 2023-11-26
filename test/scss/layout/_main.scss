@@ -2,22 +2,26 @@
 @use "../abstracts/mixins" as *;
 
 .hero {
-    margin-top: 3rem;
+    @include flex;
+    @include flex-space-between;
+    margin-top: 4rem;
     margin-bottom: 6rem;
-    // revisar uso de grid + flex
 
     @media (max-width: $breakpoint-sm) {
         margin-bottom: 4rem;
     }
 
     &--heading {
-        grid-area: 1 / 1 / 2 / 9;
         @include flex;
         @include flex-center;
+        width: 65%;
+
+        @media (max-width: $breakpoint-sm) {
+            width: 100%;
+        }
     }
 
     &--image {
-        grid-area: 1 / 9 / 2 / 13;
         @include flex;
         @include flex-end;
 
@@ -119,6 +123,24 @@
     }
 }
 
-#contacto, #contact {
+#contacto,
+#contact {
     padding-top: 2rem;
+}
+
+.agradecimientos {
+
+    &--text {
+        @include literata-medium;
+        font-size: 1.25rem;
+        margin-bottom: 1.5rem;
+    }
+
+    li {
+        margin-bottom: 0.5rem;
+
+        &:last-child {
+            margin: 0;
+        }
+    }
 }

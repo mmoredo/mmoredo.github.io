@@ -6,8 +6,8 @@
 .case-study-card {
     @include flex;
     border-radius: 0.75rem;
-    margin-bottom: 3.75rem;
-    gap: 2.5rem;
+    margin-bottom: 4rem;
+    gap: 3rem;
 
     @media (max-width: $breakpoint-md) {
         @include flex-col;
@@ -42,7 +42,7 @@
 
 .case-study-thumbnail {
     border-radius: 0.75rem;
-    min-width: 60%;
+    min-width: 58%;
     @include flex;
     @include flex-center;
 
@@ -55,9 +55,11 @@
 }
 
 .case-study-content {
-    padding: 2rem;
+    @include flex;
+    @include flex-col;
+    padding: 2rem 3rem;
     padding-left: 0;
-    min-width: calc(40% - 2.5rem);
+    min-width: calc(42% - 3rem);
 
     @media (max-width: $breakpoint-md) {
         padding: 2rem;
@@ -74,23 +76,30 @@
     }
 
     &--title {
-        margin-bottom: 1rem;
+        margin-bottom: 1.25rem;
     }
 
     &--subtitle {
-        margin-bottom: 0.75rem;
         height: auto;
 
         img {
             margin: 0 0.4rem;
         }
+
+        &__tag {
+            margin-right: 0.6rem;
+            background-color: $lime-green;
+            padding: 0.4rem 0.8rem;
+            border-radius: 100px;
+        }
     }
 
     &--text {
         margin-bottom: 2rem;
+
         @media (max-width: $breakpoint-md) {
             margin-bottom: 1.5rem;
-        } 
+        }
     }
 
     a {
@@ -129,8 +138,8 @@
     @include flex-center;
     padding: 1rem;
     padding-left: 1.25rem;
-    border-radius: 0.25rem;
-    border: 1.5px solid $green;
+    border-bottom: 2px solid $green;
+    @include literata-semibold;
     color: $green;
 
     &:hover {
@@ -143,5 +152,19 @@
 
     span {
         padding-right: 0.5rem;
+    }
+}
+
+// List
+
+.list-item-star {
+    font-size: 1.125rem;
+    padding: 0.3rem;
+    @include flex;
+    @include flex-center;
+
+    &:before {
+        content: url(../img/star-item-footer.svg);
+        margin-right: 0.5rem;
     }
 }

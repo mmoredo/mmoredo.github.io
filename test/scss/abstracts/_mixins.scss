@@ -35,15 +35,15 @@
 
 @mixin flex-center {
     align-items: center;
-} 
+}
 
 @mixin flex-col {
     flex-direction: column;
-} 
+}
 
 @mixin flex-row {
     flex-direction: row;
-} 
+}
 
 @mixin flex-space-between {
     justify-content: space-between;

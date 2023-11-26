@@ -4,7 +4,7 @@
 footer {
     background-color: $green;
     padding: 0 2rem;
-    padding-top: 3.5rem;
+    padding-top: 2.5rem;
 
     a:hover {
         text-decoration: underline;
@@ -14,7 +14,7 @@ footer {
 
 .footer {
     width: 100%;
-    margin-top: 9rem;
+    margin-top: 10rem;
 
     @media (max-width: $breakpoint-sm) {
         margin-top: 5rem;
@@ -32,16 +32,15 @@ footer {
     &-container {
         max-width: 1040px;
         margin: 0 auto;
-
-        @media (max-width: $breakpoint-md) {
-            @include flex-space-between;
-        }
+        @include flex;
+        @include flex-space-between;
+        @include flex-center;
 
         &:not(.footer-copyright) {
             @media (max-width: $breakpoint-sm) {
-            @include flex-col;
+                @include flex-col;
+            }
         }
-    }
     }
 
     &-col {
@@ -60,32 +59,7 @@ footer {
     }
 
     &--content {
-        padding-bottom: 2.5rem;
-    }
-
-    &-contact {
-        grid-area: 1 / 1 / 2 / 9;
-    }
-
-    &--links {
-        @include flex;
-        @include flex-space-between;
-        grid-area: 1 / 9 / 2 / 13;
-
-        @media (max-width: $breakpoint-sm) {
-            justify-content: flex-start;
-            padding-top: 3rem;
-        }
-
-        h4 {
-            margin-top: 0;
-            margin-bottom: 1rem;
-        }
-
-        a {
-            @include flex;
-            padding-bottom: 0.8rem;
-        }
+        padding-bottom: 2rem;
     }
 }
 
@@ -111,31 +85,14 @@ footer {
 // Case studies
 
 .footer-projects {
-    //list-style-type: ;
     margin-top: .75rem;
-
-    &li::marker {
-        content: url(/heart.svg);
-        content: url(#heart);
-        content: url("data:image/svg+xml;charset=UTF-8,<svg xmlns='http://www.w3.org/2000/svg' version='1.1' height='24' width='24'><path d='M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z' fill='none' stroke='hotpink' stroke-width='3'/></svg>");
-      }
-
-    &--link {
-        font-size: 1.125rem;
-        padding: 0.3rem;
-        @include flex;
-        @include flex-center;
-
-        &:before {
-            content: url(../img/star-item-footer.svg);
-            margin-right: 0.5rem;
-        }
-    }
 }
 
 // Selection
 
-footer span, footer a, footer h4{
+footer span,
+footer a,
+footer h4 {
     &::selection {
         background-color: $dark-green;
     }

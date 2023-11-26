@@ -15,8 +15,9 @@ body {
 
 .main-title {
     @include literata-regular;
-    font-size: 2.25rem;
+    font-size: 2rem;
     color: $green;
+    line-height: $line-height-base;
 
     @media (max-width: $breakpoint-sm) {
         font-size: 1.8rem;
@@ -24,9 +25,9 @@ body {
 }
 
 .cards-title {
-    @include literata-regular;
-    font-size: 1.75rem;
-    margin-bottom: 2.5rem;
+    @include literata-medium;
+    font-size: 1.7rem;
+    margin-bottom: 3rem;
     color: $green;
 
     @media (max-width: $breakpoint-sm) {
@@ -51,8 +52,8 @@ body {
 
 .case-study-content {
     &--title {
-        @include literata-medium;
-        font-size: 1.5rem;
+        @include literata-semibold;
+        font-size: 1.6rem;
         color: $green;
         line-height: $line-height-base;
     }
@@ -67,11 +68,12 @@ body {
 
         &--text {
             @include atkinson-bold;
-            font-size: 0.875rem;
+            font-size: 0.8rem;
             text-transform: uppercase;
             letter-spacing: $letter-spacing-subtitle;
             color: $green;
             line-height: normal;
+
             &--large {
                 font-size: 1rem;
             }
@@ -81,7 +83,7 @@ body {
 
     &--text {
         @include atkinson-regular;
-        font-size: 1rem;
+        font-size: 1.1rem;
         color: $dark-green;
         line-height: $line-height-base;
     }
@@ -91,6 +93,7 @@ body {
 
 footer {
     color: $cream;
+    font-size: 1.125rem;
 
     a {
         color: $lime-green;
@@ -98,14 +101,7 @@ footer {
 
     h4 {
         @include literata-regular;
-        margin: 0.5rem 0;
-    }
-}
-
-.footer--links {
-
-    h4 {
-        font-size: 1.1em;
+        margin: 0.35rem 0;
     }
 }
 
@@ -121,13 +117,13 @@ footer {
 // Navigation
 
 .navigation span {
-    @include literata-medium;
+    @include literata-semibold;
     font-size: 1.5rem;
     color: $dark-green;
 }
 
 .menu-navigation-list {
-    @include literata-regular;
+    @include literata-medium;
     font-size: 1rem;
 
     &--item--current {
@@ -138,7 +134,9 @@ footer {
 
 // Case study
 
-p, .text-list, .case-section-subtitle {
+p,
+.text-list,
+.case-section-subtitle {
     @include literata-regular;
     font-size: 1.125rem;
     line-height: $line-height-medium;
@@ -147,9 +145,9 @@ p, .text-list, .case-section-subtitle {
 }
 
 .case-title {
-    @include literata-regular;
+    @include literata-medium;
     font-size: 2.25rem;
-    margin-bottom: 3rem;
+    margin-bottom: 2.5rem;
     color: $green;
     line-height: $line-height-base;
 
@@ -178,8 +176,9 @@ p, .text-list, .case-section-subtitle {
     line-height: $line-height-base;
 
     div span:first-child {
+        @include literata-medium;
         color: $green;
-        margin-bottom: 0.25rem;
+        margin-bottom: 0.5rem;
     }
 }
 
@@ -192,20 +191,25 @@ p, .text-list, .case-section-subtitle {
         color: $green;
         margin: 3rem 0;
     }
+
     &-note {
         color: $green;
         font-size: 1rem;
         margin-top: 2rem;
     }
+
     &-bold {
         @include literata-semibold;
     }
+
     &-medium {
         @include literata-medium;
     }
+
     &-list {
         font-size: 1.1rem;
     }
+
     &-introduction {
         font-size: 1.3rem;
         line-height: $line-height-medium;
@@ -214,10 +218,10 @@ p, .text-list, .case-section-subtitle {
     }
 
     &--about {
-        margin-bottom: 2rem;
+        margin-bottom: 1.5rem;
 
         &--list {
-            margin-bottom: 0.8rem;
+            margin-bottom: 1rem;
         }
     }
 
@@ -226,8 +230,8 @@ p, .text-list, .case-section-subtitle {
     }
 }
 
-figcaption, .caption {
+figcaption,
+.caption {
     color: $green;
     line-height: $line-height-base;
 }
-

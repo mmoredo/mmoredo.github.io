@@ -23,25 +23,23 @@ section {
 }
 
 .case-information {
-    display: grid; // variable grid
-    grid-auto-flow: column;
-    grid-auto-columns: 1fr;
-
-    @media (max-width: $breakpoint-xs) {
-        @include flex;
-        @include flex-col;
-    }
+    @include flex;
+    @include flex-col;
 
     div {
         @include flex;
         @include flex-col;
-        padding-right: 2rem;
+        padding-bottom: 2rem;
+
+        &:last-child {
+            padding: 0;
+        }
 
         @media (max-width: $breakpoint-xs) {
             margin: 0.5rem 0;
             padding: 0;
         }
-    
+
     }
 }
 
@@ -148,17 +146,17 @@ figure {
         }
     }
 
-    p {
+    h3 {
+        @include literata-semibold;
         line-height: $line-height-base;
-        font-weight: 500;
         margin-bottom: 0.8rem;
     }
 
     >div {
         flex: 1 1 0;
-        border-radius: 0.25rem;
+        border-radius: 1rem;
         padding: 1rem;
-        background-color: $light-beige;
+        background-color: $lime-green;
     }
 
     li {
@@ -166,8 +164,8 @@ figure {
         border-radius: 0.4rem;
         line-height: $line-height-base;
         background-color: white;
-        box-shadow: 0px 1px 6px 0px rgba(0, 0, 0, 0.05);
         margin-bottom: 0.75rem;
+
         &:last-child {
             margin-bottom: 0;
         }

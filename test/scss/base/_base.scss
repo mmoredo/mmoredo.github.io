@@ -1,4 +1,3 @@
-
 @use "../abstracts/variables" as *;
 @use "../abstracts/mixins" as *;
 
@@ -8,15 +7,16 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+
     &::selection {
         background-color: $beige;
     }
 }
 
 *:focus {
-	outline: 2px $cream solid;
-	outline-offset: 0;
-	box-shadow: 0 0 0 4px $light-green;
+    outline: 2px $cream solid;
+    outline-offset: 0;
+    box-shadow: 0 0 0 4px $light-green;
 }
 
 body {
@@ -46,27 +46,6 @@ body {
     @media (max-width: $breakpoint-xs) {
         padding-top: 2rem;
     }
-   
-}
-
-.section-container {
-    display: grid; 
-    grid-auto-columns: 1fr; 
-    grid-auto-rows: auto 1fr;
-    grid-template-columns: repeat(12, 1fr); 
-    gap: 0px 60px; 
-
-    @media (min-width: $breakpoint-md) and (max-width: $breakpoint-lg) {
-        grid-template-columns: repeat(6, 1fr);
-    }
-
-    @media (max-width: $breakpoint-md) {
-        @include flex;
-    }
-
-    @media (max-width: $breakpoint-sm) {
-        gap: 0;
-    }
 
 }
 
@@ -88,6 +67,24 @@ body {
     max-width: $breakpoint-lg;
     margin: 0 auto;
     //padding: 0 1.5rem;
+}
+
+// Project summary
+
+.project-summary {
+    @include flex;
+    @include flex-row;
+    gap: 4rem;
+
+    section {
+        &:first-child {
+            width: calc(75% - 4rem);
+        }
+
+        &:last-child {
+            width: 25%;
+        }
+    }
 }
 
 // Global resets
