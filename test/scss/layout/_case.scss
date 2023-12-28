@@ -30,7 +30,7 @@ section {
         @include flex-row;
     }
 
-    div {
+    li {
         @include flex;
         @include flex-col;
         padding-bottom: 2rem;
@@ -45,7 +45,7 @@ section {
             padding: 0;
         }
 
-       /* @media (max-width: $breakpoint-xs) {
+        /* @media (max-width: $breakpoint-xs) {
             margin: 0.5rem 0;
             padding: 0;
         }¨*/
@@ -129,10 +129,18 @@ figure {
 
     &-col {
         @include flex-col;
-        margin: 3rem 0;
+        //margin: 3rem 0;
 
         figure {
             margin: 3rem 0;
+
+            &:first-child {
+                @media (max-width: $breakpoint-sm) {
+                    margin-top: 0;
+                }
+            }
+
+
         }
     }
 }
@@ -159,14 +167,14 @@ figure {
     h3 {
         @include literata-semibold;
         line-height: $line-height-base;
-        margin-bottom: 0.8rem;
+        margin-bottom: 0.625rem;
     }
 
     >div {
         flex: 1 1 0;
         border-radius: 1rem;
         padding: 1rem;
-        background-color: $lime-green;
+        background-color: $light-beige;
     }
 
     li {

@@ -814,7 +814,7 @@ footer h4::selection {
   }
 }
 .about-me-col-img {
-  width: 45%;
+  width: 35%;
 }
 @media (max-width: 640px) {
   .about-me-col-img {
@@ -828,7 +828,7 @@ footer h4::selection {
 .about-me-col-img-container--decoration {
   position: absolute;
   bottom: 0%;
-  left: 55%;
+  left: 65%;
 }
 @media (max-width: 640px) {
   .about-me-col-img-container--decoration {
@@ -918,23 +918,23 @@ section {
     flex-direction: row;
   }
 }
-.case-information div {
+.case-information li {
   display: flex;
   flex-direction: column;
   padding-bottom: 2rem;
   /* @media (max-width: $breakpoint-xs) {
-       margin: 0.5rem 0;
-       padding: 0;
-   }¨*/
+      margin: 0.5rem 0;
+      padding: 0;
+  }¨*/
 }
 @media (max-width: 640px) {
-  .case-information div {
+  .case-information li {
     width: 33%;
     padding-bottom: 0;
     padding-right: 2rem;
   }
 }
-.case-information div:last-child {
+.case-information li:last-child {
   padding: 0;
 }
 
@@ -1012,10 +1012,14 @@ figure img {
 }
 .case-figures-col {
   flex-direction: column;
-  margin: 3rem 0;
 }
 .case-figures-col figure {
   margin: 3rem 0;
+}
+@media (max-width: 640px) {
+  .case-figures-col figure:first-child {
+    margin-top: 0;
+  }
 }
 
 .case-insights {
@@ -1040,13 +1044,13 @@ figure img {
   font-family: "Literata", serif;
   font-weight: 600;
   line-height: 1.5;
-  margin-bottom: 0.8rem;
+  margin-bottom: 0.625rem;
 }
 .case-insights > div {
   flex: 1 1 0;
   border-radius: 1rem;
   padding: 1rem;
-  background-color: #EAF6D0;
+  background-color: #EFEADC;
 }
 .case-insights li {
   padding: 0.8rem;
